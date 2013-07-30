@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="emsTemplate.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+        <ui:define name="top">
+         <h:form>
+             
+         </h:form>
+    </ui:define>
+
+    <ui:define name="left">
+         <h:form>
+             
+        </h:form>
+    </ui:define>
+
+    <ui:define name="right">
+         <h:form>
+
+        </h:form>
+    </ui:define>
+
+    <ui:define name="content">
+        <h1>Events</h1>
+         <h:form>
+             <h:commandButton value="Create New Event" action ="newEvent"/><br/><br/>
+             <h:selectOneListbox size="10" style="border:1px solid black;" styleClass="right_content" value ="#{ems.selectedEventId}"
+                                 required ="true">
+                 <f:selectItems value ="#{ems.eventList}" var="event">
+                     
+                 </f:selectItems>
+             </h:selectOneListbox>
+             <h:commandButton value ="Submit" action ="selectedEvent"/>
+             
+  
+        </h:form>
+    </ui:define>
+</ui:composition>
+

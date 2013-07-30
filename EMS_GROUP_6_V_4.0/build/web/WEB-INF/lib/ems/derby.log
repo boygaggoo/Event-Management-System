@@ -1,0 +1,18 @@
+2011-04-07 20:39:37.856 GMT : Apache Derby Network Server - 10.5.3.0 - (802917) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2011-04-07 20:39:38.139 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-012f-31b1-0a29-ffff82627027
+on database directory C:\Users\Ice32141\Downloads\ems3\ems\ems  
+
+Database Class Loader started - derby.database.classpath=''
+
+2011-04-07 20:39:40.093 GMT:
+Shutting down instance a816c00e-012f-31b1-0a29-ffff82627027
+----------------------------------------------------------------
+2011-04-07 20:39:40.167 GMT Thread[DRDAConnThread_4,5,main] (DATABASE = ems), (DRDAID = {2}), Database 'ems' shutdown.
+----------------------------------------------------------------
+2011-04-07 20:39:46.268 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance eb0f4097-012f-31b1-0a29-ffff82627027
+on database directory C:\Users\Ice32141\Downloads\ems3\ems\ems  
+
+Database Class Loader started - derby.database.classpath=''

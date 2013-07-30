@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="emsTemplate.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+        <ui:define name="top">
+         <h:form>
+             
+         </h:form>
+    </ui:define>
+
+    <ui:define name="left">
+         <h:form>
+             
+        </h:form>
+    </ui:define>
+
+    <ui:define name="right">
+         <h:form>
+             
+        </h:form>
+    </ui:define>
+
+    <ui:define name="content">
+         <h:form>
+             
+             <h2>Name</h2>
+                 <h:outputText value ="#{ems.selectedPerson.firstName} "/>
+                 
+                 <h:outputText value ="#{ems.selectedPerson.middleName} "/>
+                 
+                 <h:outputText value ="#{ems.selectedPerson.lastName} "/>
+                 <p></p>
+                 <h2>Email</h2>
+                 <h:outputText value ="#{ems.selectedPerson.email}"/>
+                 <p></p>
+                 <h1>Events this Person is Attending</h1>
+                 <h:dataTable value ="#{ems.attendingList}" var ="o">
+                     <h:column>
+                         <f:facet name ="header">Event Date</f:facet>
+                         #{o.date}
+                     </h:column>
+                     
+                     <h:column>
+                         <f:facet name ="header">Start Time</f:facet>
+                         #{o.startTime}
+                     </h:column>
+
+                     <h:column>
+                         <f:facet name ="header">End Time</f:facet>
+                         #{o.endTime}
+                     </h:column>
+
+                      <h:column>
+                         <f:facet name ="header">Name</f:facet>
+                         #{o.eventName}
+                     </h:column>
+
+                     <h:column>
+                         <f:facet name ="header">Description</f:facet>
+                         #{o.description}
+                     </h:column>
+                     
+                     <h:column>
+                         <f:facet name ="header">Location</f:facet>
+                         #{o.location}
+                     </h:column>
+
+
+                 </h:dataTable>
+     
+                 
+                 
+        </h:form>
+
+
+    </ui:define>
+</ui:composition>
+

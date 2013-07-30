@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="emsTemplate.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="top">
+        <h:form>
+            <h1> Event Management System</h1>
+        </h:form>
+    </ui:define>
+
+    <ui:define name="left">
+        <h:form>
+
+        </h:form>
+    </ui:define>
+
+    <ui:define name="right">
+        <h:form>
+
+        </h:form>
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form>
+            <h1>Please Verify Your Information</h1>
+            <h2>Name</h2>
+            <h:outputText value ="#{ems.inputEventName}"/>
+            <h2>Description</h2>
+            <h:outputText value ="#{ems.inputEventDescription} "/>
+            <h2>Start</h2>
+            <h:outputText value ="#{ems.inputEventStartTime} "/>
+            <h2>End</h2>
+            <h:outputText value ="#{ems.inputEventEndTime}"/>
+            <h2>Date</h2>
+            <h:outputText value ="#{ems.inputEventDate}"/>
+            <h2>Cost</h2>
+            <h:outputText value ="#{ems.inputEventCost}"/>
+            <h2>Admission Price</h2>
+            <h:outputText value ="#{ems.inputEventAdmission}"/>
+            
+            <h1>#{ems.message}</h1>
+
+            <h:commandButton value="Save"
+                             action="#{ems.newEvent}"/>
+            <h:commandButton value="Back to Index"
+                             action="index"/>
+        </h:form>
+
+
+
+    </ui:define>
+</ui:composition>

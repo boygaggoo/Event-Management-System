@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+    
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
+        <link href="./resources/css/cssLayout.css" rel="stylesheet" type="text/css" />
+        <title>Event Management System</title>
+    </h:head>
+    
+    <h:body>
+        
+        <div id="top">
+            <ui:insert name="top">Top</ui:insert>
+            <img src="images/logo.jpg" border="0" /><br/>
+            <map id="_links" name="links">
+
+<area shape="rect" coords="2,2,99,38" href="index.xhtml" alt="Home" /> 
+<area shape="rect" coords="105,2,202,38" href="reg.xhtml" alt="Register" title="Register"    />
+<area shape="rect" coords="214,2,311,38" href="eventListing.xhtml" alt="View Events" title="View Events"    />
+<area shape="rect" coords="323,2,420,38" href="peopleListing.xhtml" alt="View Members" title="View Members"    />
+<area shape="rect" coords="422,2,519,38" href="clientListing.xhtml" alt="Pricing" title="Pricing"    />
+<area shape="rect" coords="529,2,626,38" href="locationListing.xhtml" alt="FAQ" title="FAQ"    />
+<area shape="rect" coords="635,2,732,38" href="about.xhtml" alt="jhskdf" title="jhskdf"    />
+<area shape="rect" coords="740,2,837,38" href="features.xhtml" alt="link2" title="link2"    />
+<area shape="rect" coords="847,0,975,36" href="contact.xhtml" alt="Contact" title="Contact"    />
+
+            </map> 
+            <img src="images/menu.jpg" border="0" usemap="#links" />
+        </div>
+        <div>
+           
+            <div>
+                <div id="right">
+                    <b class="rtop"><b class="r1"></b> <b class="r2"></b> <b class="r3"></b> <b class="r4"></b></b>
+                    <ui:insert name="right">Right</ui:insert>
+                    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 30000,
+  width: 250,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#000',
+      color: '#fff'
+    },
+    tweets: {
+      background: '#bdb7bd',
+      color: '#333233',
+      links: '#181818'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    behavior: 'all'
+  }
+}).render().setUser('Team612').start();
+</script>
+                    
+
+
+                    
+                    
+                    
+                    
+                     <b class="rbottom"><b class="r4"></b> <b class="r3"></b> <b class="r2"></b> <b class="r1"></b></b>
+                </div>
+                <div id="content" class="right_content">
+                    <ui:insert name="content">Content</ui:insert>
+                </div>
+            </div>
+        </div>        
+    </h:body>
+    
+</html>

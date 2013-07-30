@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="emsTemplate.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="top">
+        <h:form>
+          
+        </h:form>
+    </ui:define>
+
+    <ui:define name="left">
+        <h:form>
+
+        </h:form>
+    </ui:define>
+
+    <ui:define name="right">
+    </ui:define>
+
+    <ui:define name="content">
+                <h:form>
+                    
+                    <h1>Welcome Future Client!</h1><br />
+                    Be prepared for premier experience. When you register as a client you can post and manage their upcoming events. 
+                    Keep in touch with your attendees before and after your events!<br /><br/>
+            <h:panelGrid columns ="2" columnClasses="labelColumn, valueColumn">
+                Email:
+                <h:inputText value ="#{ems.inputClientUpdateEmail}"/>
+                Password:
+                <h:inputSecret redisplay="false" value ="#{ems.inputClientUpdatePassword}"/>
+                Re-Type Password:
+                <h:inputSecret redisplay="false" value ="#{ems.inputClientUpdatePasswordRe}"/>
+                First Name:
+                <h:inputText value ="#{ems.inputClientFirstName}"/>
+                Middle Name:
+                <h:inputText value ="#{ems.inputClientMiddleName}"/>
+                Last Name:
+                <h:inputText value ="#{ems.inputClientLastName}" />
+
+            </h:panelGrid>
+            <h:commandButton value="Cancel"
+                             action="index"/>
+            <h:commandButton value="Save"
+                             action="newClientConfirmation"/>
+
+
+        </h:form>
+    </ui:define>
+</ui:composition>
+

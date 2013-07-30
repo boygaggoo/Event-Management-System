@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="emsTemplate.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="top">
+        <h:form>
+            <h1> Event Management System</h1>
+        </h:form>
+    </ui:define>
+
+    <ui:define name="left">
+        <h:form>
+
+        </h:form>
+    </ui:define>
+
+    <ui:define name="right">
+        <h:form>
+            <h2>Name</h2>
+                 <h:outputText value ="#{ems.selectedPerson.firstName} "/>
+
+                 <h:outputText value ="#{ems.selectedPerson.middleName} "/>
+
+                 <h:outputText value ="#{ems.selectedPerson.lastName} "/>
+                 <p></p>
+                 <h2>Email</h2>
+                 <h:outputText value ="#{ems.selectedPerson.email}"/>
+                 <p></p>
+        </h:form>
+    </ui:define>
+
+    <ui:define name="content">
+                <h:form>
+            <h:panelGrid columns ="2" columnClasses="labelColumn, valueColumn">
+                Email:
+                <h:inputText value ="#{ems.inputUpdateEmail}"/>
+                Password:
+                <h:inputSecret redisplay="false" value ="#{ems.inputUpdatePassword}"/>
+                Re-Type Password:
+                <h:inputSecret redisplay="false" value ="#{ems.inputUpdatePasswordRe}"/>
+                First Name:
+                <h:inputText value ="#{ems.inputFirstName}"/>
+                Middle Name:
+                <h:inputText value ="#{ems.inputMiddleName}"/>
+                Last Name:
+                <h:inputText value ="#{ems.inputLastName}" />
+
+            </h:panelGrid>
+            <h:commandButton value="Cancel"
+                             action="index"/>
+            <h:commandButton value="Save"
+                             action="userConfirmation"/>
+
+
+        </h:form>
+    </ui:define>
+</ui:composition>
+

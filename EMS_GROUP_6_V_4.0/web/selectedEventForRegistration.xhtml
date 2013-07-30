@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="emsTemplate.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="top">
+        <h:form>
+            <h1> Event Management System</h1>
+        </h:form>
+    </ui:define>
+
+    <ui:define name="left">
+        <h:form>
+
+        </h:form>
+    </ui:define>
+
+    <ui:define name="right">
+        <h:form>
+
+        </h:form>
+    </ui:define>
+
+    <ui:define name="content">
+        <h:form>
+            <h:panelGrid columns="2">
+             Name:
+             <h:outputText value ="#{ems.selectedEvent.eventName}"/>
+             <p></p>
+             Date:
+             <h:outputText value ="#{ems.selectedEvent.date}"/>
+             <p></p>
+             Start Time:
+             <h:outputText value ="#{ems.selectedEvent.startTime}"/>
+             <p></p>
+             End Time:
+             <h:outputText value ="#{ems.selectedEvent.endTime}"/>
+             <p></p>
+             Location:
+             <h:outputText value ="#{ems.selectedEvent.location}"/>
+             <p></p>           
+             Organizer:
+             <h:outputText value ="#{ems.selectedEvent.organizer}"/>
+             <p></p>
+             Description:
+             <h:outputText value ="#{ems.selectedEvent.description}"/>
+            </h:panelGrid>
+            <h:commandButton value="Register User for This Event" action ="#{ems.doRegister}"/>
+            <h:commandButton value="Back to Index" action="index"/>
+            <h1>#{ems.message}</h1>
+        </h:form>
+    </ui:define>
+</ui:composition>
+
